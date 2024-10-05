@@ -1,0 +1,13 @@
+#project {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 16px;
+}
