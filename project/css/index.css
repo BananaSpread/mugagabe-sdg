@@ -1,0 +1,48 @@
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.index-hero {
+    h1 {
+        color: red;
+    }
+}
+
+#index-globe {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	background-color: #ac5;
+	border-radius: 50%;
+	margin: 150px;
+}
+
+.sdg-cheese {
+    height: 80px;
+    width: 160px;
+	position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    transition: all 0.5s ease-in-out;
+}
+
+.sdg-cheese:hover {
+    height: 160px;
+    width: 240px;
+
+}
+
+/* #sdg-cheese-1 {
+    background-image: url("../assets/images/cheeses/cheese-img-1.png");
+}
+
+#sdg-cheese-10 {
+    background-image: url("../assets/images/cheeses/cheese-img-8.png");
+}
+
+#sdg-cheese-11 {
+    background-image: url("../assets/images/cheeses/cheese-img-11.png");
+} */

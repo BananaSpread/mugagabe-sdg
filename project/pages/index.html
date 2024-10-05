@@ -1,1 +1,68 @@
-<h1>HELLO NASA</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mugagabe SDGs</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <div id="index">
+        <div class="index-hero">
+            <h1>Mugagabe SDGs</h1>
+            <div id="index-globe"></div>
+        </div>
+
+        <div class="index-content">
+
+        </div>
+    </div>
+
+
+    <script>
+        const parentDiv1 = document.getElementById("index-globe");
+
+function createCirclesAroundCircle(element, qtCircles, offsetToChildCenter, divName, hrefLink) {
+    let div = 360 / qtCircles;
+    let radius = element.offsetWidth;
+    let offsetToParentCenter = parseInt(radius / 2);
+    let totalOffset = offsetToParentCenter - offsetToChildCenter;
+
+    for (var i = 1; i <= qtCircles; i++) {
+        // Create anchor element
+        let anchorElement = document.createElement('a');
+        anchorElement.href = hrefLink; 
+
+        // Create img element
+        let imgElement = document.createElement('img');
+        imgElement.src = "../assets/images/cheeses/cheese-img-" + i + ".png";
+
+        // Create child div
+        let childDiv = document.createElement('div');
+        childDiv.className = divName;
+        childDiv.id = divName + "-" + i;
+        childDiv.appendChild(imgElement);
+
+        // Position the div around the parent element
+        let y = Math.sin((div * i) * (Math.PI / 180)) * radius;
+        let x = Math.cos((div * i) * (Math.PI / 180)) * radius;
+        childDiv.style.top = (y + totalOffset).toString() + "px";
+        childDiv.style.left = (x + totalOffset).toString() + "px";
+
+        // Append the div to the anchor
+        anchorElement.appendChild(childDiv);
+
+        // Append the anchor to the parent element
+        element.appendChild(anchorElement);
+    }
+}
+
+// Example usage
+createCirclesAroundCircle(parentDiv1, 17, 20, 'sdg-cheese', 'https://example.com');
+
+    </script>
+    
+</body>
+
+</html>
