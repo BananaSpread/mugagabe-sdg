@@ -1,6 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=inter:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* General variables */
+:root {
+    --color-main: #111111;
+    --color-accent: #F5F5F5;
+    --color-red: #D93B3B;
+    --color-blue: #00A7E1;
+}
+
 html {
     scroll-behavior: smooth;
 }
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-main);
+    color: var(--color-accent);
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "inter",sans-serif; /* TODO: Change font */
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
 
 .title-container {
     display: flex;

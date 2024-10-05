@@ -1,19 +1,40 @@
-body {
-	display: flex;
-	align-items: center;
+#index {
+    display: flex;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    max-width: 100vw;
 }
 
 .index-hero {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+
     h1 {
-        color: red;
+        font-size: 5rem;
+        width: 100%;
+        height: 10vh;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10vh;
+        margin-top: 5vh;
     }
 }
 
 #index-globe {
 	position: relative;
-	width: 300px;
-	height: 300px;
+	width: 25%;
+	height: 90vh;
 	background-color: #ac5;
 	border-radius: 50%;
 	margin: 150px;
@@ -35,14 +56,172 @@ body {
 
 }
 
-/* #sdg-cheese-1 {
-    background-image: url("../assets/images/cheeses/cheese-img-1.png");
+/* Index section 2 */
+.index-content {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    width: 100vw;
+    gap: 5vh;
+    margin: 10vh 0;
 }
 
-#sdg-cheese-10 {
-    background-image: url("../assets/images/cheeses/cheese-img-8.png");
+.index-content-top {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-size: 3rem;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    }
 }
 
-#sdg-cheese-11 {
-    background-image: url("../assets/images/cheeses/cheese-img-11.png");
-} */
+.index-text-img,
+.index-img-text {
+    width: 90%;
+    display: flex;
+	justify-content: space-between;
+    align-items: center;
+    gap: 10vw;
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        text-align: left;
+        width: 50%;
+    }
+
+    img {
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 4px;
+
+    }
+}
+
+.index-img-text {
+    p {
+    text-align: end;
+    }
+}
+
+
+/* Media queries */
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+
+    .index-hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+    
+        h1 {
+            font-size: 3rem;
+            width: 100%;
+            height: 10vh;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10vh;
+            margin-top: 5vh;
+        }
+    }
+    
+    #index-globe {
+        position: relative;
+        width: 25%;
+        height: 90vh;
+        background-color: #ac5;
+        border-radius: 50%;
+        margin: 150px;
+    }
+    
+    .sdg-cheese {
+        height: 80px;
+        width: 160px;
+        position: absolute;
+        background-position: center center;
+        background-repeat: no-repeat;
+        /* background-size: contain; */
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .sdg-cheese:hover {
+        height: 160px;
+        width: 240px;
+    }
+    
+    
+    /* Index section 2 */
+    .index-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        min-height: 100vh;
+        width: 100vw;
+        gap: 10vh;
+        margin: 10vh 0;
+    }
+    
+    .index-content-top {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        h2 {
+            font-size: 3rem;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+        }
+    }
+    
+    .index-text-img,
+    .index-img-text {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+    
+        p {
+            font-size: 1rem;
+            line-height: 1.2;
+            text-align: left;
+            width: 100%;
+        }
+    
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 4px;
+    
+        }
+    }
+    
+    .index-img-text {
+        flex-direction: column-reverse;
+        p {
+        text-align: start;
+        }
+    }
+}
