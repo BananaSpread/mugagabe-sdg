@@ -1,0 +1,27 @@
+#lesson {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+
+.lesson-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 16px;
+}
+
+.lesson-container img {
+    height: 400px;
+    object-fit: cover;
+    overflow: hidden;
+    aspect-ratio: 1;
+    border-radius: 4px;
+
+    margin-bottom: 16px;
+}
+
+.lesson-container p {
+    max-width: 600px;
+}
