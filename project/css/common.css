@@ -1,0 +1,13 @@
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.title-container-img {
+    height: 90px;
+    object-fit: cover;
+    overflow: hidden;
+    aspect-ratio: 1;
+    border-radius: 4px;
+}
