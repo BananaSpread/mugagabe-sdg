@@ -55,20 +55,41 @@
     display: flex;
     align-items: center;
 
-    padding: 8px 16px;
+    padding: 8px;
 
     white-space: nowrap;
 }
 
-/* .detail-block li:hover {
-    background-color: rgb(240, 240, 240);
-} */
-
-.detail-block li span{
-    flex: 1;
+.detail-block li a,
+.detail-block li a button {
+    width: 100%;
 }
 
-.detail-block li img {
+.detail-block li a {
+    text-decoration: none;
+}
+
+.detail-block li a button {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+    padding: 4px 8px;
+
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 4px;
+}
+
+.detail-block li a button:hover {
+    background-color: rgb(202, 202, 202);
+}
+
+.detail-block li a button span {
+    flex: 1;
+    text-align: left;
+}
+
+.detail-block li a button img {
     height: 32px;
     object-fit: cover;
     overflow: hidden;
@@ -78,8 +99,10 @@
 
 /* Index */
 .detail-container-index {
+    position: sticky;
     height: fit-content;
     
+    top: 0;
     border: 1px solid rgb(202, 202, 202);
 }
 
