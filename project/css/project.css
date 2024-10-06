@@ -1,22 +1,77 @@
 #project {
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
+    align-items: center;
     height: 100%;
+    width: 100%;
+    margin: 10vh 0;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 2rem 10vh 2rem;
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+.title-container-img {
+    height: 150px;
+    width: auto;
 }
 
 .project-container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 66%;
+    min-width: 750px;
+    margin: 0 2rem 10vh 2rem;
 
-    padding: 16px;
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.project-list {
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+
+    span {
+        font-weight: bold;
+    }
+}
+
+.project-references {
+    margin-bottom: 5vh;
+    li a {
+        text-decoration: none;
+        color: var(--color-blue);
+        transition: all 0.2s ease-in-out;
+        letter-spacing: 0.1rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+    }
 }
 
 /* Upload */
 .upload-container {
     display: flex;
     margin-bottom: 32px;
-
+    width: 100%;
     position: relative;
 
     border: 2px dashed var(--color-accent);
