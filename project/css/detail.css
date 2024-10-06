@@ -1,6 +1,9 @@
 #detail {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
 
     height: 100%;
 }
@@ -8,6 +11,8 @@
 .detail-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    
 }
 
 .detail-container p {
@@ -23,7 +28,6 @@
 .detail-block-container {
     display: flex;
     flex-direction: column;
-
     gap: 16px;
 }
 
