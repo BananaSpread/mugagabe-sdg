@@ -7,17 +7,108 @@
     margin: 0;
     min-height: 100vh;
     max-width: 100vw;
+
+    
+}
+
+.index-hero-wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.index-modal {
+    position: absolute;
+    background-color: var(--color-accent);
+    border-radius: 8px;
+    border: solid 1rem var(--color-green);
+    width: 90%;
+    height: 90vh;
+    z-index: 15;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.index-modal-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10%;
+    width: 90%;
+    margin-top: 2rem;
+
+    img {
+        height: 150px;
+        width: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        overflow: hidden;
+        aspect-ratio: 1;
+    }
+
+    h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--color-main);
+    }
+}
+
+.index-modal-mid {
+    width: 90%;
+
+    p {
+        width: 100%;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        text-align: center;
+        color: var(--color-main);
+    }
+}
+
+.index-modal-bottom {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    
+
+    button {
+        background-color: var(--color-green);
+        color: var(--color-accent);
+        padding: 5px 10px;
+        border-radius: 4px;
+        border: solid 2px var(--color-green);
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.index-modal-bottom button:hover {
+        background-color: var(--color-accent);
+        color: var(--color-green);
 }
 
 .index-hero {
+    position: absolute;
+    height: 100%;
+    width: 100%;
     display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
     padding: 0;
     margin: 0;
-    height: 100vh;
-    width: 100vw;
+    background-color: var(--color-main);
+    z-index: 10;
 
     h1 {
         font-size: 5rem;
@@ -29,6 +120,9 @@
         margin-bottom: 10vh;
         margin-top: 5vh;
     }
+
+    /* spce bg */
+    
 }
 
 #index-globe {

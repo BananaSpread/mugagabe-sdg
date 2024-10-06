@@ -9,9 +9,28 @@
 </head>
 <body>
     <div id="index">
-        <div class="index-hero">
-            <h1>Mugagabe SDGs</h1>
-            <div id="index-globe"></div>
+
+        <div class="index-hero-wrapper">
+            <div class="index-modal">
+                <div class="index-modal-top">
+                    <img src="../assets/images/index/sdg-13-logo.jpg" alt="index-modal-top">
+                    <h2>13 Climate Action</h2>
+                </div>
+
+                <div class="index-modal-mid">
+                    <p>Climate records were shattered in 2023, with the world watching the climate crisis unfold in real time. Communities around the world are suffering the effects of extreme weather, which is destroying lives and livelihoods on a daily basis. The roadmap to limit the rise in global temperature to 1.5°C and avoid the worst of climate chaos cannot afford any delays, indecision or half measures by the global community. It demands immediate action for drastic reductions in global greenhouse gas emissions in this decade and the achievement of net zero by 2050.</p>
+                </div>
+
+                <div class="index-modal-bottom">
+                    <a href="./detail.html"><button>Know More</button></a>
+                </div>
+
+            </div>
+
+            <div class="index-hero">
+                <h1>Mugagabe SDGs</h1>
+                <div id="index-globe"></div>
+            </div>
         </div>
 
         <div class="index-content">
@@ -36,7 +55,7 @@
 
 
     <script>
-        const parentDiv1 = document.getElementById("index-globe");
+        /* const parentDiv1 = document.getElementById("index-globe");
 
 function createCirclesAroundCircle(element, qtCircles, offsetToChildCenter, divName, hrefLink) {
     let div = 360 / qtCircles;
@@ -75,7 +94,34 @@ function createCirclesAroundCircle(element, qtCircles, offsetToChildCenter, divN
 
 // Example usage
 createCirclesAroundCircle(parentDiv1, 17, 20, 'sdg-cheese', 'https://example.com');
+ */
 
+        const parentDiv1 = document.getElementById("index-globe");
+    
+    
+        function createCirclesAroundCircle(element, qtCircles, offsetToChildCenter, divName) {
+            let div = 360 / qtCircles;
+            let radius = element.offsetWidth;
+            let offsetToParentCenter = parseInt(radius / 2);
+            let totalOffset = offsetToParentCenter - offsetToChildCenter;
+    
+            for(var i = 1; i <= qtCircles; i++) {
+                let childDiv = document.createElement('div');
+                childDiv.className = divName;
+                childDiv.id = divName + "-" + i;
+                childDiv.style.backgroundImage = "url(../assets/images/cheeses/cheese-img-" + i + ".png)";
+    
+                let y = Math.sin((div * i) * (Math.PI / 180)) * radius;
+                let x = Math.cos((div * i) * (Math.PI / 180)) * radius;
+    
+                childDiv.style.top = (y + totalOffset).toString() + "px";
+                childDiv.style.left = (x + totalOffset).toString() + "px";
+    
+                element.appendChild(childDiv);
+            }
+        }
+    
+        createCirclesAroundCircle(parentDiv1, 17, 20, 'sdg-cheese');
     </script>
     
 </body>
