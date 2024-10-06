@@ -7,6 +7,23 @@
 
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/project.css">
+
+    <script>
+        function onchangeinput(event) {
+            const hasFile = event.target.files?.length > 0;
+            const uploadContainer = document.getElementById('upload-container-content');
+            if (hasFile) {
+                for (const node of uploadContainer.children) {
+                    node.style.display = 'none';
+                }
+
+                const span = document.createElement('span');
+                span.innerText = event.target.files[0].name;
+
+                uploadContainer.appendChild(span);
+            }
+        }
+    </script>
 </head>
 <body>
     <div id="project">
@@ -18,7 +35,27 @@
         </section>
 
         <section class="project-container">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada nisi quis odio tempor, eu iaculis dolor ullamcorper. Phasellus nec auctor lectus, vitae blandit nisi. Donec ullamcorper ante purus, vel consequat ante placerat nec. Nunc non mi sed orci ultrices mollis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque varius, magna et tristique egestas, tortor purus rutrum mauris, eu efficitur ex elit eu purus. Fusce leo eros, sollicitudin id fringilla sit amet, scelerisque eget lorem. In neque ipsum, imperdiet ac rhoncus nec, mattis non felis. Quisque pretium massa sed nunc viverra, eu accumsan purus congue. Suspendisse mollis elit non augue finibus imperdiet. Donec malesuada sapien at nisl malesuada ullamcorper. Maecenas ut sem in sapien ultricies lacinia. Quisque ante velit, congue quis velit eu, cursus bibendum felis. Sed id lectus porta, sodales turpis in, sagittis nisl.
+            </p>
 
+            <h2>References</h2>
+            <ul>
+                <li>
+                    <a href="#">Reference 1</a>
+                </li>
+                <li>
+                    <a href="#">Reference 2</a>
+                </li>
+            </ul>
+
+            <div class="upload-container">
+                <div id="upload-container-content">
+                    <span>Upload File</span>
+                    <img src="../assets/icons/upload_file.svg" alt="Upload File Icon">
+                </div>
+                <input type="file" id="upload-file" name="upload-file" onchange="onchangeinput(event)">                
+            </div>
         </section>
     </div>
 </body>

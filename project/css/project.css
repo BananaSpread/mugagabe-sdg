@@ -11,3 +11,52 @@
 
     padding: 16px;
 }
+
+/* Upload */
+.upload-container {
+    display: flex;
+    margin-bottom: 32px;
+
+    position: relative;
+
+    border: 2px dashed var(--color-accent);
+    border-radius: 4px;
+    height: 120px;
+
+    background-color: rgba(255, 255, 255, .3);
+
+    transition: background-color .2s ease-in-out;
+}
+
+.upload-container:hover {
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.upload-container>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    
+    gap: 4px;
+    width: 100%;
+    height: 100%;
+}
+
+.upload-container span {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.upload-container input {
+    opacity: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.upload-container input:hover {
+    cursor: pointer;
+}
