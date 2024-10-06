@@ -6,12 +6,21 @@
     <title>Interestellar Odissey</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/index.css">
+
+
+    <script>
+        function onClickOnPlaceholder() {
+            const modal = document.getElementById('modal');
+
+            modal.classList.toggle('index-modal-active');
+        };
+    </script>
 </head>
 <body>
     <div id="index">
 
         <div class="index-hero-wrapper">
-            <div class="index-modal">
+            <div class="index-modal" id="modal">
                 <div class="index-modal-top">
                     <img src="../assets/images/index/sdg-13-logo.jpg" alt="index-modal-top">
                     <h2>13 Climate Action</h2>
@@ -29,7 +38,10 @@
 
             <div class="index-hero">
                 <h1>Interestellar Odissey</h1>
-                <div id="index-globe"></div>
+                <div class="index-placeholder" onclick="onClickOnPlaceholder()">
+                    <img src="../assets/images/index/index-hero-img.png" alt="index-hero-img">
+                </div>
+                <!-- <div id="index-globe"></div> -->
             </div>
         </div>
 
@@ -39,13 +51,13 @@
             </div>
 
             <div class="index-text-img">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia odit non ex nisi optio nihil nesciunt magnam autem aliquid et alias sit quaerat possimus esse eius maiores facilis, nemo, deserunt voluptatum aperiam? Fuga odio nemo voluptates quo, voluptate provident ad laborum fugit. Ad corrupti itaque, voluptatem tempora debitis rem necessitatibus in ipsam laudantium est quidem dolorum non aliquam iusto laborum incidunt dolore ratione nisi neque soluta iure? Quae, est ex. Minima voluptate earum, tenetur doloribus rem natus. Exercitationem magnam numquam deleniti inventore eius dolor asperiores, nemo vero? Unde at dicta ratione, maiores sint fugiat dolorum blanditiis ipsa laboriosam libero voluptas.</p>
+                <p>The "Mugagabe SDGs" project aims to bring the Sustainable Development Goals (SDGs) directly into the classroom by leveraging NASA's vast resources and cutting-edge technologies. Through a dynamic e-learning platform, students aged 10-17 will have the opportunity to explore interactive projects that focus on key global challenges, such as climate action, clean energy, and sustainable cities. By linking SDG concepts to real-world NASA missions, satellite data, and scientific research, this project offers an engaging and hands-on approach to learning, empowering students to become active participants in building a more sustainable future.</p>
                 <img src="../assets/images/index/index-img-1.webp" alt="index-img-1">
             </div>
 
             <div class="index-img-text">
                 <img src="../assets/images/index/index-img-2.png" alt="index-img-2">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa rem optio eius obcaecati error, autem doloribus expedita dolorem, accusamus omnis rerum quam necessitatibus ducimus ut cum voluptas unde consequuntur magnam doloremque quos soluta? Ea earum laborum doloremque minus facilis eius iure nulla sed quaerat accusamus repellat at quibusdam nihil iusto porro odio illum, eos dolores. Minima, odit facilis molestias nostrum libero enim aliquam, iste tempora quod eum asperiores suscipit modi consequuntur numquam voluptate ab commodi reiciendis, vitae dicta voluptas atque? Fuga non nisi eius maiores voluptatibus, sit tempora corporis excepturi dolore obcaecati nulla nemo minus necessitatibus aspernatur praesentium nobis ut.</p>
+                <p>At the heart of this initiative is a commitment to fostering collaboration within the school community and beyond. Through team-based activities, students, teachers, and families will work together on projects designed to tackle local challenges while connecting to the global SDG framework. By blending space exploration with sustainability education, this platform aims to inspire the next generation of changemakers who can think critically, act locally, and innovate globally in addressing our planet's most pressing environmental and social issues.</p>
             </div>
 
 
@@ -53,49 +65,8 @@
         </div>
     </div>
 
-
+<!-- 
     <script>
-        /* const parentDiv1 = document.getElementById("index-globe");
-
-function createCirclesAroundCircle(element, qtCircles, offsetToChildCenter, divName, hrefLink) {
-    let div = 360 / qtCircles;
-    let radius = element.offsetWidth;
-    let offsetToParentCenter = parseInt(radius / 2);
-    let totalOffset = offsetToParentCenter - offsetToChildCenter;
-
-    for (var i = 1; i <= qtCircles; i++) {
-        // Create anchor element
-        let anchorElement = document.createElement('a');
-        anchorElement.href = hrefLink; 
-
-        // Create img element
-        let imgElement = document.createElement('img');
-        imgElement.src = "../assets/images/cheeses/cheese-img-" + i + ".png";
-
-        // Create child div
-        let childDiv = document.createElement('div');
-        childDiv.className = divName;
-        childDiv.id = divName + "-" + i;
-        childDiv.appendChild(imgElement);
-
-        // Position the div around the parent element
-        let y = Math.sin((div * i) * (Math.PI / 180)) * radius;
-        let x = Math.cos((div * i) * (Math.PI / 180)) * radius;
-        childDiv.style.top = (y + totalOffset).toString() + "px";
-        childDiv.style.left = (x + totalOffset).toString() + "px";
-
-        // Append the div to the anchor
-        anchorElement.appendChild(childDiv);
-
-        // Append the anchor to the parent element
-        element.appendChild(anchorElement);
-    }
-}
-
-// Example usage
-createCirclesAroundCircle(parentDiv1, 17, 20, 'sdg-cheese', 'https://example.com');
- */
-
         const parentDiv1 = document.getElementById("index-globe");
     
     
@@ -122,7 +93,7 @@ createCirclesAroundCircle(parentDiv1, 17, 20, 'sdg-cheese', 'https://example.com
         }
     
         createCirclesAroundCircle(parentDiv1, 17, 20, 'sdg-cheese');
-    </script>
+    </script> -->
     
 </body>
 
